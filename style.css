@@ -1,0 +1,128 @@
+@font-face{
+    font-family: Montserrat;
+    src: url(Montserrat/Montserrat.ttf);
+}
+
+@font-face{
+    font-family: Finland;
+    src: url(finland-cufonfonts/Finland.otf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header{
+    width: 100%;
+	background-color: rgb(0,133,195);   
+	box-shadow: 1px 1px 5px #000;
+	height: 70px;
+	position: sticky;
+    top: 0;
+    
+}
+
+
+#menu{
+	width: 90%;
+	padding-top: 3px;
+	
+}
+
+#menu ul a{
+	color: #ffffff;
+	text-decoration: none;
+	font: bold 20px Verdana;
+	padding: 20px 25px 20px 25px;
+	background-color: rgb(0,133,195);
+	border-bottom: 8px solid transparent;
+	transition-duration: 0.7s; 
+}
+
+#menu ul a:hover{
+	border-bottom: 9px solid #ffffff;
+}
+
+main{
+    margin-top: 100px;
+    color: black;
+    width: 50%;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    background-color:  white;/*rgb(0, 133, 195);*/
+    font-family: 'Finland','Montserrat';
+    margin-bottom: 50px;
+    box-shadow:  4px 5px 5px 3px rgba(0,0,0,0.44);
+    border-top: 5px solid rgb(0,133,195);
+    border-radius: 10px;
+}
+.inf{
+    font-size: 50px;
+    padding-left: 30px;
+    padding-top: 30px;
+    border-bottom: 2px solid white;
+    margin: 10px;
+}
+
+.obl{
+    font-size: 12px;
+}
+span{
+    color: red;
+}
+label{
+    font-size: 20px;
+    padding-left:0;
+}
+input {
+    font-size: 15px;
+    border: 0;
+    padding: 5px;
+    transition-duration: 0.4s;
+    border-bottom: 2px solid rgb(0,133,195);
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    
+}
+
+.cont-form{
+    width: 95%;
+    border: 3px rgb(0,133,195) solid;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat';
+}
+
+.cont{
+    margin-left: 45px;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 50%;
+
+}
+.cont-in, 
+.cont-ex,
+.cont-cd,
+.cont-cp,
+.cont-est,
+.cont-pais,
+.cont-bt{
+    display: inline-block;
+    /*border: 1px red solid;*/
+    width: 40%;
+    }
+.btn {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+input:hover{
+    background-color: #dfdfdf;
+    
+}
