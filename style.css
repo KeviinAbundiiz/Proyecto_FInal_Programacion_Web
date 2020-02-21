@@ -126,3 +126,10 @@ input:hover{
     background-color: #dfdfdf;
     
 }
+
+footer 
+{
+	background-color: #0d47a1;
+	color: white;
+	padding: 1%;
+}
