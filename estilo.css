@@ -1,6 +1,27 @@
+@font-face{
+    font-family: Montserrat;
+    src: url(Montserrat/Montserrat.ttf);
+}
+
+@font-face{
+    font-family: Finland;
+    src: url(finland-cufonfonts/Finland.otf);
+}
+
 *{
 	padding: 0;
 	margin: 0;
+}
+
+h1
+{
+	font-family: 'Finland';
+	font-size: 80px;
+}
+
+body
+{
+	background-color: #f5f5f5;
 }
 
 header 
@@ -48,7 +69,7 @@ header
 	margin-top: 10px;
 }
 
-main
+main 
 {
 	background-color: #f5f5f5;
 	margin-left: auto;
@@ -81,5 +102,22 @@ footer
 	color: white;
 	padding: 1%;
 }
+
+.mva
+{
+	width: 60%;
+	font-family: 'Montserrat';
+	font-size: 25px;
+	text-align: justify;
+	background-color: white;
+	padding: 50px;
+	border-top: 5px solid rgb(0,133,195);
+	border-radius: 10px;
+	box-shadow:  4px 5px 5px 3px rgba(0,0,0,0.44);
+	
+}
+
+
+
 
 
