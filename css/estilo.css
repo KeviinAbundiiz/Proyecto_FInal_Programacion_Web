@@ -1,11 +1,11 @@
 @font-face{
-    font-family: Montserrat;
-    src: url(Montserrat/Montserrat.ttf);
+	font-family: Montserrat;
+	src: url(Montserrat/Montserrat.ttf);
 }
 
 @font-face{
-    font-family: Finland;
-    src: url(finland-cufonfonts/Finland.otf);
+	font-family: Finland;
+	src: url(finland-cufonfonts/Finland.otf);
 }
 
 
@@ -123,6 +123,105 @@ footer
 	border-radius: 10px;
 	box-shadow:  4px 5px 5px 3px rgba(0,0,0,0.44);
 	
+}
+
+#btn-menu
+{
+	display: none;
+}
+
+#dell
+{
+	display: none;
+}
+
+header label
+{
+	display: none;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	border-right: 1px solid #fff;
+	float: left;
+}
+
+header label: hover 
+{
+	cursor: pointer;
+	background: rgba(0,0,0,0.3);
+
+}
+
+.imagen
+	{
+		width: 500px;
+		height: 300px;
+	}
+
+
+@media (max-width: 960px) {
+	header label 
+	{
+		display: block;
+	}
+
+	.logo
+	{
+		display: none;
+	}
+
+	#dell
+	{
+		display: block;
+		float: right;
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+
+	#menu
+	{
+		width: 70%;
+		margin-top: 55px;
+		position: absolute;
+	}
+
+
+	#menu ul a
+	{
+		display: none;
+	}
+
+	#btn-menu:checked ~ #menu ul a 
+	{
+		display: block;
+		margin-left: -50px;
+		border-bottom: 9px solid #12F3F6;
+	}
+
+	.con
+	{
+		width: 95%;
+	}
+
+	main
+	{
+		height: auto;
+		margin-top: 10px;
+	}
+
+	h1
+	{
+		margin: 10px;
+	}
+
+	
+
+	.imagen
+	{
+		width: 50vw;
+		height: 30vh;
+	}
+
 }
 
 
