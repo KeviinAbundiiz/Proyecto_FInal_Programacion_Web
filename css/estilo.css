@@ -211,10 +211,16 @@ header label: hover
 
 	h1
 	{
-		margin: 10px;
+		margin: 0px;
+		padding: 0px;
+		font-size: 50px;
 	}
 
-	
+	p
+	{
+		font-size: 15px;
+	}
+
 
 	.imagen
 	{
