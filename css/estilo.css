@@ -217,15 +217,15 @@ footer
 
 .mva
 {
-	width: 60%;
+	width: 40%;
 	font-family: 'Montserrat';
-	font-size: 25px;
+	font-size: 20px;
 	text-align: justify;
 	background-color: white;
 	padding: 50px;
 	border-top: 5px solid rgb(0,133,195);
 	border-radius: 10px;
-	box-shadow:  4px 5px 5px 3px rgba(0,0,0,0.44);
+	/*box-shadow:  4px 5px 5px 3px rgba(0,0,0,0.44);*/
 	
 }
 
@@ -380,6 +380,11 @@ header label:hover
 		margin-bottom: 15px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.mva
+	{
+		width: 60%;
 	}
 }
 
