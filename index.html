@@ -4,7 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="stylesheet" href="css/popup.css">
+		<link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/all.css">
 		<script src="js/scrollreveal.js"></script>
+		
+
 		<title>Página principal</title>
 	</head>
 	<body>
@@ -45,9 +49,15 @@
 						<br>
 						Computadora de videojuegos de escritorio potente y 
 						compacta con capacidad de actualización simple y 
-						procesadores Intel Core de 9.ª
+						procesadores Intel Core de 9.ª. Impresionante rendimiento 
+						en tareas de renderizado.
 					</p>
 				</div>
+				<div class="botones-con">
+					<button id="btn-abrir-popup" class="btn-abrir-popup">Caracteristicas</button>
+					<button id="btn-comprar"><i class="fas fa-shopping-cart"></i></button>
+				</div>
+				
 			</div>
 			
 			<div class="con">
@@ -66,6 +76,10 @@
 						torre Dell T3610.
 					</p>
 				</div>
+				<div class="botones-con">
+					<button id="btn-abrir-popup01" class="btn-abrir-popup">Caracteristicas</button>
+					<button id="btn-comprar"><i class="fas fa-shopping-cart"></i></button>
+				</div>
 			</div>
 
 			<div class="con">
@@ -82,6 +96,10 @@
 						reducido,  estabilidad  y  variedad  de  opciones  
 						en  una  computadora  de  sobremesa  estándar. 
 					</p>
+				</div>
+				<div class="botones-con">
+					<button id="btn-abrir-popup02" class="btn-abrir-popup">Caracteristicas</button>
+					<button id="btn-comprar"><i class="fas fa-shopping-cart"></i></button>
 				</div>			
 			</div>
 			</main>
@@ -108,6 +126,10 @@
 						empresas en crecimiento.
 					</p>
 				</div>
+				<div class="botones-con">
+					<button id="btn-abrir-popup03" class="btn-abrir-popup">Caracteristicas</button>
+					<button id="btn-comprar"><i class="fas fa-shopping-cart"></i></button>
+				</div>		
 			</div>
 			
 			<div class="con">
@@ -125,6 +147,10 @@
 						aquellos que juegan con un presupuesto.
 					</p>
 				</div>
+				<div class="botones-con">
+					<button id="btn-abrir-popup04" class="btn-abrir-popup">Caracteristicas</button>
+					<button id="btn-comprar"><i class="fas fa-shopping-cart"></i></button>
+				</div>		
 			</div>
 
 			<div class="con">
@@ -141,7 +167,11 @@
 						y un diseño elegante. Con procesadores Intel® de 10a 
 						generación y una gran variedad de puertos.
 					</p>
-				</div>			
+				</div>
+				<div class="botones-con">
+					<button id="btn-abrir-popup05" class="btn-abrir-popup">Caracteristicas</button>
+					<button id="btn-comprar"><i class="fas fa-shopping-cart"></i></button>
+				</div>					
 			</div>
 		</main>
 
@@ -172,14 +202,88 @@
 
 				</form>
 			</div>
-		<div class="imgComentario">
-			
-		</div>
+		<div class="imgComentario"></div>
 		</main>
+
+
+			<!--
+				### AQUI INICIAN LOS POP UPS XD 
+			-->
+		<div class="overlay" id="overlay">
+			<div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>Caracteristicas</h3>
+				<h4>PC modelo</h4>
+			<!--
+	
+			-->	
+			</div>
+		</div>
+
+		<div class="overlay" id="overlay01">
+			<div class="popup" id="popup01">
+				<a href="#" id="btn-cerrar-popup01" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>Caracteristicas</h3>
+				<h4>PC modelo 2</h4>
+			<!--
+				
+			-->	
+			</div>
+		</div>
+		
+		<div class="overlay" id="overlay02">
+			<div class="popup" id="popup02">
+				<a href="#" id="btn-cerrar-popup02" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>Caracteristicas</h3>
+				<h4>PC modelo 3</h4>
+			<!--
+				
+			-->	
+			</div>
+		</div>
+
+
+		<div class="overlay" id="overlay03">
+			<div class="popup" id="popup03">
+				<a href="#" id="btn-cerrar-popup03" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>Caracteristicas</h3>
+				<h4>PC modelo 4</h4>
+			<!--
+
+			-->	
+			</div>
+		</div>
+
+		<div class="overlay" id="overlay04">
+			<div class="popup" id="popup04">
+				<a href="#" id="btn-cerrar-popup04" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>Caracteristicas</h3>
+				<h4>PC modelo 5</h4>
+			<!--
+
+			-->	
+			</div>
+		</div>
+		
+		<div class="overlay" id="overlay05">
+			<div class="popup" id="popup05">
+				<a href="#" id="btn-cerrar-popup05" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>Caracteristicas</h3>
+				<h4>PC modelo 6</h4>
+			<!--
+
+			-->	
+			</div>
+		</div>
+
+			<!--
+				### AQUI TERMINAN LOS POP UPS XD 
+			-->
 
 		<footer>Integrantes del Equipo 4: Abundis Morales Kevin Leonel, Bibiano Cortes Marko Alan, 
 			Caballero Patricio Cristóbal y Tolentino Bracamontes Abril Clarisa
 		</footer>
+		<script src="js/popup.js"></script>
 		<script>
 			window.sr = ScrollReveal();
 			
@@ -206,8 +310,6 @@
 				origin: 'left',
 				distance: '100px'
 			}); 
-
-
 		</script>
 	</body>
 </html>
