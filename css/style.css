@@ -171,7 +171,7 @@ header label
     float: left;
 }
 
-header label: hover 
+header label:hover 
 {
     cursor: pointer;
     background: rgba(0,0,0,0.3);
