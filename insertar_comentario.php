@@ -16,24 +16,30 @@
 		$nombre=$_POST['name'];
 		$comentario=$_POST['coment'];
 
-
-		
 		$insertar = "INSERT INTO contactanos VALUES ('$nombre','$email','$comentario')";
 		
-		$result = mysqli_query($conexion, $insertar);
+		//$result = mysqli_query($conexion, $insertar);
+		$result = $pdo->prepare($insertar);
+		$result->execute();
 
 		if(!$result)
 		{
-			echo "No se pudo realizar la inserción";
+			//echo "No se pudo realizar la inserción";
+			echo '<script language="javascript">';
+				echo 'alert("No se pudo realizar la inserción")';
+			echo '</script>';
 		}
 		else
 		{
-			echo "Inserción exitosa";
+			//echo "Inserción exitosa";
+			echo '<script language="javascript">';
+				echo 'alert("Inserción exitosa")';
+			echo '</script>';
 		}
 
 		
-		mysqli_close($conexion);
-
+		//mysqli_close($conexion);
+		$pdo = null;
 		
 		?>
 

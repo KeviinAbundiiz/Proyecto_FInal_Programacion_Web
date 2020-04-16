@@ -1,28 +1,17 @@
 <?php
-$servidor = "localhost";
+
+$link = 'mysql:host=localhost;dbname=dell';
 $usuario = 'root';
-$contrasena = '';
-$bd = 'dell';
+$pass = ''; 
 
-$conexion = mysqli_connect($servidor,$usuario,$contrasena);
+try {
+    $pdo = new PDO($link, $usuario, $pass);
+    
+    //echo 'conectado';
+  
 
-if(!$conexion)
-{
-	echo "No se pudo conectar al servidor".mysql_error();
-}
-else
-{
-	//echo "Conexión exitosa";
-}
-
-$basededatos = mysqli_select_db($conexion,$bd);
-
-if(!$basededatos)
-{
-	echo "No se pudo encontrar la base de datos";
-}
-else
-{
-	//echo "Base de datos seleccionada";
+} catch (PDOException $e) {
+    print "¡Error!: " . $e->getMessage() . "<br/>";
+    die();
 }
 ?>
