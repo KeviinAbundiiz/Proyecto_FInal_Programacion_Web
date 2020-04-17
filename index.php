@@ -169,7 +169,7 @@
 		</div>
 
 		<?php
-		endforeach
+		endforeach;
 		$pdo = null;
 		?>
 		<!--### AQUI TERMINAN LOS POP UPS XD -->

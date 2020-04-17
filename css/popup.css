@@ -37,13 +37,13 @@
         display: block;
         text-align: center;
     }
-    .con #btn-abrir-popup,
-    .con #btn-abrir-popup01,
-    .con #btn-abrir-popup02,
+    .con #btn-abrir-popup0,
+    .con #btn-abrir-popup1,
+    .con #btn-abrir-popup2,
     
-    .con #btn-abrir-popup03,
-    .con #btn-abrir-popup04,
-    .con #btn-abrir-popup05,
+    .con #btn-abrir-popup3,
+    .con #btn-abrir-popup4,
+    .con #btn-abrir-popup5,
     .con #btn-comprar {
         width: 90%;
     }
