@@ -28,7 +28,8 @@
 	cursor: pointer;
 	transition: .3s ease all;
     cursor: pointer;
-    width: 40%;
+	width: 40%;
+	text-align: center;
    
 }
 

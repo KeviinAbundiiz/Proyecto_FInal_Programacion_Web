@@ -24,6 +24,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
 	<link rel="stylesheet" href="../css/tabla.css">
+	<script src="../js/scrollreveal.js"></script>
 	<title>PHP Insertar Comentario</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
             Comentarios
         </div>
             <table cellspacing="0">
-                <tr>
+                <tr class="rowComentarios">
                     
                     <th>Nombre</th>
                     <th>Email</th>
@@ -43,10 +44,10 @@
 				<?php
 					foreach($resultadoArray as $dato):
 				?>
-                <tr>
-					<td><?php echo $dato['nombre'] ?></td>
-					<td><?php echo $dato['email'] ?></td>
-					<td><?php echo $dato['comentario'] ?></td>
+                <tr class="rowComentarios">
+					<td class="tabla-comentario"><?php echo $dato['nombre'] ?></td>
+					<td class="tabla-comentario"><?php echo $dato['email'] ?></td>
+					<td class="tabla-comentario"><?php echo $dato['comentario'] ?></td>
 				</tr>
 				<?php
 					endforeach;
@@ -59,7 +60,21 @@
 		<a href="../index.php"> <input type="button" name="regresar" value="Regresar"></a>
 	</center>
 	
+		<script>
+			window.sr = ScrollReveal();
 
+			sr.reveal('.header',{
+				duration: '3000',
+				origin: 'left',
+				distance: '100px'
+			});
+
+			sr.reveal('.rowComentarios',{
+				duration: '3000',
+				origin: 'bottom',
+				distance: '100px'
+			}); 
+		</script>
 
 </body>
 </html>

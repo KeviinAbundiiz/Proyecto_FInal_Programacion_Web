@@ -257,10 +257,23 @@ header label:hover
 }
 
 .imagen
-	{
-		width: 500px;
-		height: 300px;
-	}
+{
+	width: 500px;
+	height: 300px;
+}
+
+.btn-compra-fix,
+.btn-compra-fix i
+{
+	color: white;
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-align: center;
+}
+.btn-compra-fix i{
+	margin-top: 10px;
+}
 
 
 @media (max-width: 1024px) {

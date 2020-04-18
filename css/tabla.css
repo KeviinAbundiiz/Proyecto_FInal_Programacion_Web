@@ -99,17 +99,24 @@ table tr:nth-child(2n+1) {
         left: 0;
         position: absolute;
    }
-    td:nth-child(2):before {
-        content: 'Name:';
-   }
-    td:nth-child(3):before {
+    .tabla-comentario:nth-child(2):before {
         content: 'Email:';
    }
+   .tabla-comentario:nth-child(3):before {
+        content: 'Comentario:';
+   }
+   .tabla-carrito:nth-child(2):before {
+    content: 'Nombre:';
+    }
+    .tabla-carrito:nth-child(3):before {
+    content: 'Precio:';
+    }
+   
     td:nth-child(4):before {
-        content: 'Phone:';
+        content: 'Cantidad:';
    }
     td:nth-child(5):before {
-        content: 'Comments:';
+        content: 'Subtotal:';
    }
     tr {
         padding: 10px 0;

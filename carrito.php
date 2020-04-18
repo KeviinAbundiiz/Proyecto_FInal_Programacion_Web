@@ -1,4 +1,85 @@
 <?php
+    session_start();
+   // printf(session_status());
+    include 'conexion.php';
+
+    if(isset($_SESSION['carrito_sess'])){
+        //si existe, buscamos si ya esta agregado el producto
+       // printf("entra");
+        if(isset($_GET['equiposId'])){
+            $arreglo = $_SESSION['carrito_sess'];
+            $encontro = false;
+            $numero = 0;    
+         //   printf("entra2");
+            for($i=0;$i < count($arreglo);$i++){
+                if($arreglo[$i]['Id'] == $_GET['equiposId']){
+                    $encontro = true;
+                    $numero = $i;
+                }
+            }
+            if($encontro == true){
+                $arreglo[$numero]['Cantidad'] = $arreglo[$numero]['Cantidad']+1;
+                $_SESSION['carrito_sess'] = $arreglo;
+            }else{
+                //No estaba el registro
+                $nombre = "";
+                $precio = "";
+                $imagen = "";
+    
+                $query  = 'SELECT * FROM equipos WHERE id='. $_GET['equiposId']; 
+                $gsent = $pdo->prepare($query);
+                $gsent->execute();
+                
+                $resultado = $gsent->fetch();
+    
+                //printf($query);
+                //var_dump($resultado);
+                 $nombre = $resultado['nombre'];
+                 $precio = $resultado['precio'];
+                 $imagen = $resultado['imagen'];
+                
+                 $arregloNuevo = array(
+                     'Id' => $_GET['equiposId'],
+                     'Nombre' => $nombre,
+                     'Precio' => $precio,
+                     'Imagen' => $imagen,
+                     'Cantidad' => 1
+                );
+                array_push($arreglo,$arregloNuevo);
+                $_SESSION['carrito_sess'] = $arreglo;
+
+            }
+        }
+    }else{
+        //creamos variable de sesion
+        if(isset($_GET['equiposId'])){
+           
+            $nombre = "";
+            $precio = "";
+            $imagen = "";
+
+            $query  = 'SELECT * FROM equipos WHERE id='. $_GET['equiposId']; 
+            $gsent = $pdo->prepare($query);
+            $gsent->execute();
+            
+            $resultado = $gsent->fetch();
+
+            //printf($query);
+            var_dump($resultado);
+             $nombre = $resultado['nombre'];
+             $precio = $resultado['precio'];
+             $imagen = $resultado['imagen'];
+            
+             $arreglo[]= array(
+                 'Id' => $_GET['equiposId'],
+                 'Nombre' => $nombre,
+                 'Precio' => $precio,
+                 'Imagen' => $imagen,
+                 'Cantidad' => 1
+            );
+            $_SESSION['carrito_sess'] = $arreglo;
+        }   
+    }
 
 ?>
 
@@ -10,9 +91,11 @@
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/all.css">
+    <script src="js/scrollreveal.js"></script>
     <title>Carrito compras</title>
 </head>
 <body>
+    
     <header>    
         <input type="checkbox" id="btn-menu">
         <label class="label-fix" for="btn-menu"><img class="img-fix" src="img/menu.png" alt="menu" width="40" height="40"></label> 
@@ -30,6 +113,7 @@
                 </ul>
             </section>
     </header>   
+
     <div class="contact">
         <h1>
             Carrito de compras
@@ -38,50 +122,52 @@
 
     <div class="table-users">
         <div class="header">
-            Users
+            Contenido del carrito
         </div>
             <table cellspacing="0">
                 <tr>
-                    <th>Picture</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th width="230">Comments</th>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
                 </tr>
 
+            <?php 
+                if(isset($_SESSION['carrito_sess'])){
+                    $arregloCarrito = $_SESSION['carrito_sess']; 
+                   // var_dump($arregloCarrito);
+                    for($i=0; $i < count($arregloCarrito); $i++ ){
+            ?>
                 <tr>
-                    <td><img src="https://i.picsum.photos/id/1005/100/100.jpg" alt="" /></td>
-                    <td>Jane Doe</td>
-                    <td>jane.doe@foo.com</td>
-                    <td>01 800 2000</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
+                    <td><img src="img/<?php echo $arregloCarrito[$i]['Imagen'];?>" alt="" /></td>
+                    <td class="tabla-carrito"><?php echo $arregloCarrito[$i]['Nombre'];?></td>
+                    <td class="tabla-carrito"><i class="fas fa-dollar-sign"></i> <?php echo $arregloCarrito[$i]['Precio'];?></td>
+                    <td><?php echo $arregloCarrito[$i]['Cantidad'];?></td>
+                    <td><i class="fas fa-dollar-sign"></i> <?php echo $arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad'];?></td>
                 </tr>
+            <?php 
+                    } 
+                }
+            ?>
 
-                <tr>
-                    <td><img src="https://i.picsum.photos/id/1027/100/100.jpg" alt="" /></td>
-                    <td>John Doe</td>
-                    <td>john.doe@foo.com</td>
-                    <td>01 800 2000</td>
-                    <td>Blanditiis, aliquid numquam iure voluptatibus ut maiores explicabo ducimus neque, nesciunt rerum perferendis, inventore.</td>
-                </tr>
 
-                <tr>
-                    <td><img src="https://i.picsum.photos/id/64/100/100.jpg" alt="" /></td>
-                    <td>Jane Smith</td>
-                    <td>jane.smith@foo.com</td>
-                    <td>01 800 2000</td>
-                    <td> Culpa praesentium unde pariatur fugit eos recusandae voluptas.</td>
-                </tr>
-                
-                <tr>
-                    <td><img src="https://i.picsum.photos/id/1025/100/100.jpg" alt="" /></td>
-                    <td>John Smith</td>
-                    <td>john.smith@foo.com</td>
-                    <td>01 800 2000</td>
-                    <td>Aut voluptatum accusantium, eveniet, sapiente quaerat adipisci consequatur maxime temporibus quas, dolorem impedit.</td>
-                </tr>
             </table>
     </div>
-    
+    <script>
+			window.sr = ScrollReveal();
+			
+			sr.reveal('.table-users',{
+				duration: '3000',
+				origin: 'bottom',
+				distance: '100px'
+			}); 
+
+			sr.reveal('.contact',{
+				duration: '3000',
+				origin: 'left',
+				distance: '100px'
+			}); 
+		</script>
 </body>
 </html>

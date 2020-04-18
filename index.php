@@ -70,7 +70,10 @@
 				</div>
 				<div class="botones-con">
 					<button id="btn-abrir-popup<?php echo $dato['id']-1 ?>" class="btn-abrir-popup">Caracteristicas</button>
-					<button id="btn-comprar"><i class="fas fa-shopping-cart"></i></button>
+					<button id="btn-comprar">
+						<a class="btn-compra-fix" href="carrito.php?equiposId=<?php echo $dato['id']?> "><i class="fas fa-shopping-cart"></i></a>
+					</button>
+					
 				</div>
 			</div>
 			<?php 
@@ -106,7 +109,9 @@
 				</div>
 				<div class="botones-con">
 					<button id="btn-abrir-popup<?php echo $dato['id']-1?>" class="btn-abrir-popup">Caracteristicas</button>
-					<button id="btn-comprar"><i class="fas fa-shopping-cart"></i></button>
+					<button id="btn-comprar">
+						<a class="btn-compra-fix" href="carrito.php?equiposId=<?php echo $dato['id']?> "><i class="fas fa-shopping-cart"></i></a>
+					</button>
 				</div>
 			</div>
 			<?php 
