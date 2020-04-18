@@ -3,14 +3,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
 	<title>PHP Insertar Comentario</title>
 </head>
 <body>
 	<center>
 		<?php
 
-		include 'conexion.php';
+		include '../conexion.php';
 
 		$email=$_POST['email'];
 		$nombre=$_POST['name'];
@@ -44,7 +44,7 @@
 		?>
 
 		<br><br>
-		<a href="index.html"> <input type="button" name="regresar" value="Regresar"></a>
+		<a href="../index.php"> <input type="button" name="regresar" value="Regresar"></a>
 	</center>
 
 

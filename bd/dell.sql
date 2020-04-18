@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-04-2020 a las 01:56:35
+-- Tiempo de generación: 18-04-2020 a las 03:09:17
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -40,6 +40,7 @@ CREATE TABLE `contactanos` (
 INSERT INTO `contactanos` (`nombre`, `email`, `comentario`) VALUES
 ('Kevin Leonel Abundis Morales', 'Abundiiz_Keviin@outlook.es', 'Su p?gina es muy buena'),
 ('Angel Jesús Abundis Morales', 'abundis@gmail.com', ' Fatal la pagina'),
+('Alan Bibiano', 'alan@hotmail.com', ' Prueba para consultar comentario con nuevo diseño de tabla y comprobar funcionamiento :3'),
 ('Abril Clarisa Tolentino Bracamontes', 'clarisa@hotmail.com', ' Buen diseño'),
 ('Cristobal Caballero Patricio', 'cristo-gay@outlook.com', ' Su página es bonita'),
 ('Jesus Erasmo Gallardo Cabrera', 'Erasmo@gmail.com', ' No me gusto su página web'),

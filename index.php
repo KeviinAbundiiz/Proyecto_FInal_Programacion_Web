@@ -38,6 +38,7 @@
 						<a href="vision.html">Visión</a>
 						<a href="factura.html">Facturación</a>
 						<a href="acercadenosotros.html">Acerca de Nosotros</a>
+						<a class="carrito" href="carrito.php">Carrito</a>
 					</ul>
 				</section>
 		</header>
@@ -124,7 +125,7 @@
 
 		<main class="comentarios">
 			<div class="formulario">
-				<form action="insertar_comentario.php" method="post" >
+				<form action="php/insertar_comentario.php" method="post" >
 					<div class="cont-input">
 						<label for="name">Nombre</label>
 						<input type="text" name="name" id="name" placeholder="Nombre completo" required>
@@ -140,7 +141,7 @@
 					<div class="cont-input">
 						<input type="submit" value="Subir">
 						<input type="reset" value="Borrar">	
-						<a href="consultar_comentarios.php"> <input type="button" name="regresar" value="Ver Comentarios"></a>				
+						<a href="php/consultar_comentarios.php"> <input type="button" name="regresar" value="Ver Comentarios"></a>				
 					</div>
 				</form>
 			</div>
@@ -157,6 +158,9 @@
 				<a href="#" id="btn-cerrar-popup<?php echo $dato['id']-1 ?>" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
 				<h3>Caracteristicas</h3>
 				<h4><?php echo $dato['nombre'];?></h4>
+				<div class="pcImg">
+					<img src="img/<?php echo $dato['imagen'];?>">
+				</div>
 				<ul style="list-style-type:none;">
 					<li><b>CPU:</b> <?php echo $dato['cpu']?></li>
 					<li><b>GPU:</b> <?php echo $dato['gpu']?></li>
