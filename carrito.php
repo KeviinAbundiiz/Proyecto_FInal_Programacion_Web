@@ -140,7 +140,7 @@
                     for($i=0; $i < count($arregloCarrito); $i++ ){
             ?>
                 <tr>
-                    <td><img src="img/<?php echo $arregloCarrito[$i]['Imagen'];?>" alt="" /></td>
+                    <td><img class ="img-table" src="img/<?php echo $arregloCarrito[$i]['Imagen'];?>" alt="" /></td>
                     <td class="tabla-carrito"><?php echo $arregloCarrito[$i]['Nombre'];?></td>
                     <td class="tabla-carrito"><i class="fas fa-dollar-sign"></i> <?php echo $arregloCarrito[$i]['Precio'];?></td>
                     <td><?php echo $arregloCarrito[$i]['Cantidad'];?></td>
