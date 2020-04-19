@@ -187,7 +187,7 @@
                         </div>
                     </td>
                     <td class="cant<?php echo $arregloCarrito[$i]['Id'];?>"> 
-                        <?php echo $arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad'];?>
+                       $<?php echo $arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad'];?>
                     </td>
                     <td>
                         <a class="btn-compra-fix btnEliminar" href=""  data-id="<?php echo $arregloCarrito[$i]['Id']; ?>">
