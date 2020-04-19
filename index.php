@@ -164,7 +164,7 @@
 				<h3>Caracteristicas</h3>
 				<h4><?php echo $dato['nombre'];?></h4>
 				<div class="pcImg">
-					<img src="img/<?php echo $dato['imagen'];?>">
+					<img class="popupImg"src="img/<?php echo $dato['imagen'];?>">
 				</div>
 				<ul style="list-style-type:none;">
 					<li><b>CPU:</b> <?php echo $dato['cpu']?></li>

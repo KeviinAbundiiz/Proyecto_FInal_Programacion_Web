@@ -56,7 +56,7 @@ table td {
 table td:last-child {
     font-size: 0.95em;
     line-height: 1.4;
-    text-align: left;
+	text-align: center;
 }
 table th {
     /*
@@ -121,10 +121,14 @@ table tr:nth-child(2n+1) {
     tr {
         padding: 10px 0;
         position: relative;
+        width: 600px;
    }
     tr:first-child {
         display: none;
    }
+   table td:last-child {
+ 	text-align: left;
+    }
 }
 @media screen and (max-width: 500px) {
     .header {
@@ -165,8 +169,13 @@ table tr:nth-child(2n+1) {
    }
     td:last-child {
         padding-bottom: 1rem !important;
+        
+   }
+   table td:last-child {
+    text-align: center;
    }
     tr {
+        width: 340px;
         background-color: white !important;
         border: 1px solid #6cbec6;
         border-radius: 10px;
@@ -191,3 +200,6 @@ table tr:nth-child(2n+1) {
     height: 60px;
     width:  60px;
 }
+input[type=number] {
+    -moz-appearance: textfield;
+  }

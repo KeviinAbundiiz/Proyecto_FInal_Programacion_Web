@@ -12,7 +12,8 @@
 .con #btn-abrir-popup3,
 .con #btn-abrir-popup4,
 .con #btn-abrir-popup5,
-.con #btn-comprar {
+.con #btn-comprar,
+#btn-comprar {
 	padding: 0 20px;
     margin-bottom: 20px;
     margin-left: auto;
