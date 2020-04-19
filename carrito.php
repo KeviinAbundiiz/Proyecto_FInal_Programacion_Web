@@ -186,8 +186,7 @@
                             value="<?php echo $arregloCarrito[$i]['Cantidad'];?>">
                         </div>
                     </td>
-                    <td class="cant<?php echo $arregloCarrito[$i]['Id'];?>">
-                        <i class="fas fa-dollar-sign"></i> 
+                    <td class="cant<?php echo $arregloCarrito[$i]['Id'];?>"> 
                         <?php echo $arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad'];?>
                     </td>
                     <td>
@@ -251,16 +250,33 @@
                     boton.parent('td').parent('tr').remove();
                 }); 
             });
-
+            // Se Calcula de precio(subtotal del producto) con respecto a la cantidad asiganda
+            //.keyup responde a cualquier cambio en la etiqueta input[numero]
             $(".txtCantidad").keyup(function(){
                 var cantidad = $(this).val();
                 var precio =$(this).data('precio');
                 var id =$(this).data('id');
+                //si el input esta vacio, se imprime "-"
                 if(cantidad == ''){
                     $(".cant"+id).text('-');
                 }else{
+                    //Se realiza la multi
                     var multi = parseFloat(cantidad)*parseFloat(precio).toFixed(2);
+                    //se imprime y cambia, pero solo en el frontend, 
+                    // se necesita que se actualiza el arreglo carrito con la cantidad
                     $(".cant"+id).text('$'+multi);
+
+                    $.ajax({
+                        method:'POST',
+                        url:'php/actualizarCarrito.php',
+                        data: {
+                            id:id,
+                            cantidad:cantidad
+                        }
+                        
+                    }).done(function(respuesta){
+                       // alert(respuesta);
+                    });
                 }
 
             });
