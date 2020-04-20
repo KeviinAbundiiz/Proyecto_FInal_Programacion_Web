@@ -161,7 +161,10 @@
                 if(isset($_SESSION['carrito_sess'])){
                     $arregloCarrito = $_SESSION['carrito_sess']; 
                    // var_dump($arregloCarrito);
+                   // variable total carrito
+                   $total = 0;
                     for($i=0; $i < count($arregloCarrito); $i++ ){
+                        $total = $total + ($arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad']);
             ?>
                 <tr>
                     <td>
@@ -187,7 +190,7 @@
                         </div>
                     </td>
                     <td class="cant<?php echo $arregloCarrito[$i]['Id'];?>"> 
-                       $<?php echo $arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad'];?>
+                       $<?php echo number_format($arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad'],2,'.','');?>
                     </td>
                     <td>
                         <a class="btn-compra-fix btnEliminar" href=""  data-id="<?php echo $arregloCarrito[$i]['Id']; ?>">
@@ -202,9 +205,13 @@
                     } 
                 }
             ?>
-
-
             </table>
+        <div class="header">
+            Total: 
+        </div>
+        <div class="header ">
+            $ <?php echo number_format($total,2,'.',''); ?>
+        </div>
     </div>
     <a href="index.php"> <input type="button" name="regresar" value="Regresar"></a>
 </center>
