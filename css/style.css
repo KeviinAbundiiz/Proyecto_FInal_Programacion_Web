@@ -310,7 +310,7 @@ header label:hover
 }
 
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     header label 
     {
         display: block;
@@ -332,14 +332,17 @@ header label:hover
     #menu
     {
         width: 70%;
-        margin-top: 62px;
+        margin-top: 55px;
         position: absolute;
     }
 
     #menu ul a
-    {
-        display: none;
-    }
+	{
+		display: none;
+		background: rgb(67,70,180);
+    	background: linear-gradient(263deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
+	
+	}
 
     #btn-menu:checked ~ #menu ul a 
     {
