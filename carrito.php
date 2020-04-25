@@ -130,7 +130,7 @@
                     </div>
                     <a href="mision.html">Misión</a>
                     <a href="vision.html">Visión</a>
-                    <a href="factura.html">Facturación</a>
+                    <a href="factura.php">Facturación</a>
                     <a href="acercadenosotros.html">Acerca de Nosotros</a>
                     <a class="carrito" href="index.php">Home</a>
                 </ul>
@@ -209,8 +209,15 @@
         <div class="header">
             Total: 
         </div>
-        <div class="header ">
-            $ <?php echo number_format($total,2,'.',''); ?>
+        <div class="header">
+            $ <?php 
+            if(isset($total)){
+                echo number_format($total,2,'.',''); 
+            }else{
+                echo "No hay productos";
+            }
+            
+            ?>
         </div>
     </div>
     <a href="index.php"> <input type="button" name="regresar" value="Regresar"></a>

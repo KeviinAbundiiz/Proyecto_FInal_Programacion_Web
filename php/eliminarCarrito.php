@@ -23,5 +23,5 @@ if(isset($arregloNuevo)){
     
     unset($_SESSION['carrito_sess']);
 }
-echo "Listo, se eliminó procuto";
+echo "Listo, se eliminó producto";
 ?>

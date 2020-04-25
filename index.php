@@ -36,7 +36,7 @@
 						</div>
 						<a href="mision.html">Misión</a>
 						<a href="vision.html">Visión</a>
-						<a href="factura.html">Facturación</a>
+						<a href="factura.php">Facturación</a>
 						<a href="acercadenosotros.html">Acerca de Nosotros</a>
 						<a class="carrito" href="carrito.php">Carrito</a>
 					</ul>

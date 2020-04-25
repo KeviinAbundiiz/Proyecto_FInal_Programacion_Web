@@ -1,3 +1,9 @@
+<?php
+session_start();
+include 'conexion.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,6 +104,59 @@
                     <label for="email"><span>*</span>Correo electrónico: </label>
                     <input type="email" name="email" id="email" placeholder="E-mail" required>
                 </div>
+                <div id="deslizarBoton"> Mostrar Carrito </div>
+                <div id="panel">
+                    <table>
+                        <tr>   
+                            <th>Equipo</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                        <?php 
+                            if(isset($_SESSION['carrito_sess'])){
+                                $arregloCarrito = $_SESSION['carrito_sess'];
+                                $total = 0;
+                                for($i = 0; $i < count($arregloCarrito); $i++){
+                                    $total = $total + ($arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad']);
+                        ?>
+                        <tr>   
+                            <td>
+                                <?php echo $arregloCarrito[$i]['Nombre'];?>
+                            </td>
+                            <td>
+                                $<?php echo $arregloCarrito[$i]['Precio'];?>
+                            </td>
+                            <td>
+                            <?php echo $arregloCarrito[$i]['Cantidad'];?>
+                            </td>
+                            <td>
+                                $<?php echo number_format($arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad'],2,'.','');?>
+                            </td>
+                        </tr>
+
+                        <?php        
+                                }
+                            }
+                        ?>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Total: </th>
+                            <th style="border-bottom: 2px solid rgb(0,133,195);">
+                                $ <?php 
+                                    if(isset($total)){
+                                        echo number_format($total,2,'.',''); 
+                                    }else{
+                                        echo "No hay productos";
+                                    }                                
+                                ?>
+                            </th>
+                            
+                        </tr>
+                    </table>
+                </div>
+
                 <div class="cont cont-bt">
                     <input type="reset" value="Reiniciar" class="btn">
                 </div>
@@ -109,7 +168,15 @@
 
 
     </main>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#deslizarBoton").click(function(){
+                $("#panel").slideToggle();
+            });
 
+        });
+    </script>
     <footer>Integrantes del Equipo 4: Abundis Morales Kevin Leonel, Bibiano Cortes Marko Alan, Caballero Patricio Cristóbal y Tolentino Bracamontes Abril Clarisa</footer>
     
 </body>
