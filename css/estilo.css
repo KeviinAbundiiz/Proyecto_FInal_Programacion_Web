@@ -1,392 +1,825 @@
 @font-face{
+
 	font-family: Montserrat;
+
 	src: url(Montserrat/Montserrat.ttf);
+
 }
 
+
+
 @font-face{
+
 	font-family: Finland;
+
 	src: url(finland-cufonfonts/Finland.otf);
+
 }
+
+
+
 
 
 h1
+
 {
+
 	font-family: 'Finland';
+
 	font-size: 80px;
+
 }
+
+
 
 body
+
 {
+
 	padding: 0;
+
 	margin: 0;
+
 	/*background-color: #f5f5f5; 
+
 	background: rgb(245,245,245);
+
 	background: linear-gradient(180deg, rgba(245,245,245,1) 37%, rgba(0,133,195,1) 89%);
+
 	*/
+
 	background: rgb(67,70,180);
+
 	background: linear-gradient(180deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
+
 	background-attachment: fixed;
+
+
 
 }
 
+
+
 header 
+
 {
+
 	
+
 	/*#f5f5f5;*/
+
 	/* JEJE XD
+
 	background: rgb(67,70,180);
+
 	background: linear-gradient(180deg, rgba(67,70,180,1) 62%, rgba(0,133,195,1) 97%); 
+
 	*/
+
 	background: rgb(67,70,180);
+
     background: linear-gradient(263deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
+
 	/*box-shadow: ;*/
+
 	/*box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);*/
+
 	min-height: 80px;
+
 	position: sticky;
+
 	top: 0;
+
 	width: 100%;
+
 	border-radius: 5px;
+
 	margin-left: auto;
+
 	margin-right: auto;
 
+
+
 	z-index: 999;
+
+}
+
+textarea{
+    max-height: 50px;
+    max-width: 200px;
 }
 
 #menu{
+
 	width: 100%;
+
 	height: auto;
+
 	padding-top: 10px;
+
 	transition-duration: 0.7s; 
+
 }
+
+
 
 #menu ul a{
+
 	color: #ffffff;
+
 	text-decoration: none;
+
 	font: bold 20px Verdana;
+
 	padding: 20px 25px 20px 25px;
+
 	/*background-color: rgb(0,133,195);*/
+
 	background-color: transparent;
+
 	border-bottom: 8px solid transparent;
+
 	transition-duration: 0.7s; 
+
 }
+
+
 
 #menu ul a:hover{
+
 	border-bottom: 9px solid #ffffff;
+
 }
+
+
 
 #espacio 
+
 {
+
 	color: white;
+
 }
+
+
 
 .con
+
 {	
+
 	/*border: 1px solid turquoise;*/
+
 	width: 28%;
+
 	min-height: 300px;
+
 	display: flex;
+
 	flex-direction: column;
+
 	padding: 5px 5px 5px 5px;
+
 	background-color: white;
+
 	border-radius: 1em;
+
 }
+
 .pcImg{
+
 	text-align: center;
+
 	margin: 5px;
+
 }
+
+.popupImg{
+
+	width: 35%;
+
+	height: auto;
+
+}
+
 .texto{
+
 		/*border: 1px red solid;*/
+
 		width: 85%;
+
 		margin-left: auto;
+
 		margin-right: auto;
+
 }
+
 .texto p{
+
 	font-family: 'Montserrat';
+
 	font-size: small;
+
 }
+
+
 
 .logo
+
 {
+
 	border: none;
+
 	margin-bottom: 0px;
+
 	margin-right: 30px;
+
 	float: left;
+
 	position: relative;
+
 	bottom: 8px;
+
 }
 
+
+
 main 
+
 {
+
 	display: flex;
+
 	flex-direction: row;
+
 	flex-wrap: wrap;
+
 	justify-content: space-evenly;
+
 	align-content: space-between;
+
 	
+
 	width: 100%;
+
 	height: auto;
+
 	margin-top: 0px;
+
 	margin-bottom: 250px;
+
 	margin-left: auto;
+
 	margin-right: auto;
 
+
+
 	padding-top: 15px;
+
 	padding-bottom: 30px;
+
 	/*border: 1px solid black;*/
+
 	/*background-color: #f5f5f5;*/
+
 	background-color: transparent;
 
 
+
+
+
 }
+
 .contact{
+
 	display: block;
+
 	/*border: 1px solid brown;*/
+
 	color: white;
+
 	text-align: center;
+
 }
+
 .contact h1{
+
 	margin-bottom: 0;
+
 	font-size: 50px;
+
 }
+
 .comentarios{
+
 	background-color: #fff;
+
 	width: 80%;
+
 	height: auto;
+
 	display: flex;
+
 	flex-direction: row;
+
 	
+
 }
+
 .formulario{
+
 	width: 50%;
+
 	height: 100%;
+
 	padding: 15px;
+
 	padding-left: 30px;
+
 	padding-top: 30px;
+
 	border: 1px solid #ddd;	
+
 	font-family: 'Montserrat';
+
 }
+
 textarea{
+
 	padding: 15px;
+
 	width: 95%;
+
 	border: 1px solid #ddd;
+
 	margin-left: 10px;
+
 	font-family: 'Montserrat';
+
 }
+
+
 
 .cont-input{
+
 	width: 70%;
+
 }
+
 .cont-input>input{
+
 	border: 0;
+
 	border-bottom: 1px solid #ddd;
+
 	width: 100%;
 
+
+
 }
 
+
+
 .imgComentario{
+
 	background-image: url(../img/laptop-flat.png);
+
 	background-size: cover;
+
 	background-repeat: no-repeat;
+
 	background-position: center;
+
 	border: 1px solid #ddd;
+
 	width: 40%;
+
 }
+
+
+
 
 
 input
+
 {
+
 	margin: 10px 10px 10px 10px;
+
 	padding: 5px 5px 5px 5px;
+
 	border-radius: 3px;
+
 }
 
+
+
 label
+
 {
+
 	margin: 10px 10px 10px 10px;
+
 	padding: 5px 5px 5px 5px;
+
 }
+
+
+
 
 
 footer 
+
 {
+
 	background-color: rgb(0,133,195);
+
 	color: white;
+
 	padding: 1%;
+
 	font-family: 'Montserrat';
+
 }
+
+
 
 .mva
+
 {
+
 	width: 40%;
+
 	font-family: 'Montserrat';
+
 	font-size: 20px;
+
 	text-align: justify;
+
 	background-color: white;
+
 	padding: 50px;
+
 	border-top: 5px solid rgb(0,133,195);
+
 	border-radius: 10px;
+
 	/*box-shadow:  4px 5px 5px 3px rgba(0,0,0,0.44);*/
+
 	
+
 }
+
+
 
 #btn-menu
+
 {
+
 	display: none;
+
 }
+
+
 
 #dell
+
 {
+
 	display: none;
+
 }
+
+
 
 header label
+
 {
+
 	display: none;
+
 	width: 40px;
+
 	height: 40px;
+
 	padding: 10px;
+
 	border-right: 1px solid #fff;
+
 	float: left;
+
 }
+
+
 
 header label:hover 
+
 {
+
 	cursor: pointer;
+
 	background: rgba(0,0,0,0.3);
+
+
 
 }
 
+
+
 .imagen
-	{
-		width: 500px;
-		height: 300px;
-	}
+
+{
+
+	width: 500px;
+
+	height: 300px;
+
+}
+
+
+
+.btn-compra-fix,
+
+.btn-compra-fix i
+
+{
+
+	display: block;
+
+	color: white;
+
+	width: 100%;
+
+	height: 100%;
+
+}
+
+.btn-compra-fix i{
+
+	margin-top: 10px;
+
+	margin-left: auto;
+
+	margin-right: 100px;
+
+}
+
+
+
 
 
 @media (max-width: 1024px) {
+
 	header label 
+
 	{
+
 		display: block;
+
 	}
+
+
 
 	.logo
+
 	{
+
 		display: none;
+
 	}
+
+
 
 	#dell
+
 	{
+
 		display: block;
+
 		float: right;
+
 		margin-top: 20px;
+
 		margin-right: 20px;
+
 	}
 
+
+
 	#menu
+
 	{
+
 		width: 70%;
+
 		margin-top: 55px;
+
 		position: absolute;
+
 	}
+
+
+
 
 
 	#menu ul a
+
 	{
+
 		display: none;
+
 		background: rgb(67,70,180);
+
     	background: linear-gradient(263deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
+
 	
+
 	}
+
+
 
 	#btn-menu:checked ~ #menu ul a 
+
 	{
+
 		display: block;
+
 		margin-left: -50px;
+
 		border-bottom: 9px solid #12F3F6;
+
 	}
+
+
 
 	.con
+
 	{
+
 		width: 95%;
+
 		display: block ;
+
 		margin-top: 20px;
+
 		margin-left: auto;
+
 		margin-right: auto;
+
 		
+
 	}
+
+
 
 	main
+
 	{	display: block;
+
 		height: auto;
+
 		margin-top: 20px;
+
 		margin-left: auto;
+
 		margin-right: auto;
+
 		padding: 0;
+
 		
+
 	}
+
+
 
 	h1
+
 	{
+
 		margin: 0px;
+
 		padding: 0px;
+
 		font-size: 50px;
+
 	}
 
+
+
 	p
+
 	{
+
 		font-size: 15px;
+
 	}
+
+
+
 
 
 	.imagen
+
 	{
+
 		width: 50vw;
+
 		height: 30vh;
+
 	}
+
+
 
 	.comentarios{
+
 		flex-direction: column;
+
 		flex-wrap: nowrap;
+
 		align-content: center;
+
 		height: auto;
+
 	}
+
 	.formulario{
+
 		width: 90%;
+
 		padding: 0;
+
 		font-family: 'Montserrat';
+
 		margin-left: auto;
+
 		margin-right: auto;
+
 		margin-top: 15px;
+
 	}
+
 	.cont-input{
+
 		width: 70%;
+
 		
+
 		
+
 	}
+
 	.cont-input>input{
+
 		border: 0;
+
 		border-bottom: 1px solid #ddd;
+
 		width: 100%;
 
-	}
-	.imgComentario{
-		background-image: url(../img/laptop-flat.png);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		width: 90%;
-		height: 400px;
-		margin-top: 15px;
-		margin-bottom: 15px;
-		margin-left: auto;
-		margin-right: auto;
+
+
 	}
 
-	.mva
-	{
-		width: 60%;
+	.imgComentario{
+
+		background-image: url(../img/laptop-flat.png);
+
+		background-size: cover;
+
+		background-repeat: no-repeat;
+
+		background-position: center;
+
+		width: 90%;
+
+		height: 400px;
+
+		margin-top: 15px;
+
+		margin-bottom: 15px;
+
+		margin-left: auto;
+
+		margin-right: auto;
+
 	}
+
+
+
+	.mva
+
+	{
+
+		width: 60%;
+
+	}
+
 }
+
+
+
+
+
+
 
 
 
