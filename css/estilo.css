@@ -193,12 +193,18 @@ textarea{
 
 }
 
+
 .popupImg{
 
 	width: 35%;
 
 	height: auto;
 
+}
+
+.popupImg{
+	width: 35%;
+	height: auto;
 }
 
 .texto{
@@ -527,6 +533,7 @@ header label:hover
 
 .imagen
 
+
 {
 
 	width: 500px;
@@ -564,6 +571,26 @@ header label:hover
 }
 
 
+
+
+{
+	width: 500px;
+	height: 300px;
+}
+
+.btn-compra-fix,
+.btn-compra-fix i
+{
+	display: block;
+	color: white;
+	width: 100%;
+	height: 100%;
+}
+.btn-compra-fix i{
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: 100px;
+}
 
 
 
