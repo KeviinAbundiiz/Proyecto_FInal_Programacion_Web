@@ -261,13 +261,9 @@
                     <a href="mision.html">Misión</a>
 
                     <a href="vision.html">Visión</a>
-<<<<<<< HEAD
-                    <a href="factura.php">Facturación</a>
-=======
 
                     <a href="factura.php">Facturación</a>
 
->>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
                     <a href="acercadenosotros.html">Acerca de Nosotros</a>
 
                     <a class="carrito" href="index.php">Home</a>
@@ -425,17 +421,6 @@
             Total: 
 
         </div>
-<<<<<<< HEAD
-        <div class="header">
-            $ <?php 
-            if(isset($total)){
-                echo number_format($total,2,'.',''); 
-            }else{
-                echo "No hay productos";
-            }
-            
-            ?>
-=======
 
         <div class="header">
 
@@ -455,7 +440,6 @@
 
             ?>
 
->>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
         </div>
 
     </div>
