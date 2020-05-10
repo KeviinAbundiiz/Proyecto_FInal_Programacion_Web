@@ -1,59 +1,241 @@
 @font-face{
+
     font-family: Montserrat;
+
     src: url(Montserrat/Montserrat.ttf);
+
 }
+
+
 
 @font-face{
+
     font-family: Finland;
+
     src: url(finland-cufonfonts/Finland.otf);
+
 }
+<<<<<<< HEAD
 /*
+=======
+
+/*
+
+>>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
 body{
+
     margin: 0;
+
     padding: 0;
+
     background-color: #f5f5f5;
+
 }
 
+
+
 header{
+
     width: 100%;
+
 	background-color: rgb(0,133,195);   
+
 	box-shadow: 1px 1px 5px #000;
+
 	height: 80px;
+
 	position: sticky;
+
     top: 0;
+
     
+
 }
+
+
+
 
 
 #menu{
+
 	width: 90%;
+
     padding-top: 10px;
+
     margin-top: 10px;
+
     transition-duration: 0.7s;
+
     padding-top: 3px;
+
     transition-duration: 0.7s; 
+
 }
+
+
 
 #menu ul a{
+
 	color: #ffffff;
+
 	text-decoration: none;
+
 	font: bold 20px Verdana;
+
 	padding: 20px 25px 20px 25px;
+
 	background-color: rgb(0,133,195);
+
 	border-bottom: 8px solid transparent;
+
 	transition-duration: 0.7s; 
+
 }
+
+
 
 #menu ul a:hover{
+
 	border-bottom: 9px solid #ffffff;
+
 }
 
+
+
 .logo
+
 {
+
     border: none;
+
     margin-bottom: 20px;
+
     margin-right: 30px;
+
     float: left;
+
+}
+
+*/
+
+
+
+body
+
+{
+
+	padding: 0;
+
+	margin: 0;
+
+	/*background-color: #f5f5f5; 
+
+	background: rgb(245,245,245);
+
+	background: linear-gradient(180deg, rgba(245,245,245,1) 37%, rgba(0,133,195,1) 89%);
+
+	*/
+
+	background: rgb(67,70,180);
+
+	background: linear-gradient(180deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
+
+    background-attachment: fixed;
+
+
+
+
+
+}
+
+
+
+header 
+
+{
+
+	
+
+	/*#f5f5f5;*/
+
+	/* JEJE XD
+
+	background: rgb(67,70,180);
+
+	background: linear-gradient(180deg, rgba(67,70,180,1) 62%, rgba(0,133,195,1) 97%); 
+
+	*/
+
+	background: rgb(67,70,180);
+
+    background: linear-gradient(263deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
+
+	/*box-shadow: ;*/
+
+	/*box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);*/
+
+	min-height: 80px;
+
+	position: sticky;
+
+	top: 0;
+
+	width: 100%;
+
+	border-radius: 5px;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+
+
+	z-index: 999;
+
+}
+
+
+
+#menu{
+
+	width: 100%;
+
+	height: auto;
+
+	padding-top: 10px;
+
+	transition-duration: 0.7s; 
+
+}
+
+
+
+#menu ul a{
+
+	color: #ffffff;
+
+	text-decoration: none;
+
+	font: bold 20px Verdana;
+
+	padding: 20px 25px 20px 25px;
+
+	/*background-color: rgb(0,133,195);*/
+
+	background-color: transparent;
+
+	border-bottom: 8px solid transparent;
+
+	transition-duration: 0.7s; 
+
+}
+
+
+
+#menu ul a:hover{
+
+	border-bottom: 9px solid #ffffff;
+
 }
 */
 
@@ -134,86 +316,251 @@ header
 
 
 
+
+
+.logo
+
+{
+
+	border: none;
+
+	margin-bottom: 0px;
+
+	margin-right: 30px;
+
+	float: left;
+
+	position: relative;
+
+	bottom: 8px;
+
+}
+
+
+
+#espacio 
+
+{
+
+	color: white;
+
+}
+
+
+
+
+
+
+
 main{
+
     margin-top: 100px;
+
     color: black;
+
     width: 50%;
+
     height: max-content;
+
     margin-left: auto;
+
     margin-right: auto;
+
     padding-bottom: 30px;
+
     background-color:  white;/*rgb(0, 133, 195);*/
+
     font-family: 'Finland','Montserrat';
+
     margin-bottom: 50px;
+
     box-shadow:  4px 5px 5px 3px rgba(0,0,0,0.44);
+
     border-top: 5px solid rgb(0,133,195);
+
     border-radius: 10px;
+
 }
+
 .inf{
+
     font-size: 50px;
+
     padding-left: 30px;
+
     padding-top: 30px;
+
     border-bottom: 2px solid white;
+
     margin: 10px;
+
 }
+
+
 
 .obl{
+
     font-size: 12px;
+
 }
+
+
 
 span{
+
     color: red;
+
 }
+
+
 
 label{
+
     font-size: 20px;
+
     padding-left:0;
+
 }
+
+
 
 input {
+
     font-size: 15px;
+
     border: 0;
+
     padding: 5px;
+
     transition-duration: 0.4s;
+
     border-bottom: 2px solid rgb(0,133,195);
+
     font-family: 'Montserrat', sans-serif;
+
     width: 90%;
+
     
+
 }
+
+
 
 .cont-form{
+
     width: 95%;
+
     border: 3px rgb(0,133,195) solid;
+
     margin-left: auto;
+
     margin-right: auto;
+
     font-family: 'Montserrat';
+
 }
+
+
 
 .cont{
+
     margin-left: 45px;
+
     margin-right: auto;
+
     padding-top: 15px;
+
     padding-bottom: 15px;
+
     width: 50%;
 
-}
-.cont-in, 
-.cont-ex,
-.cont-cd,
-.cont-cp,
-.cont-est,
-.cont-pais,
-.cont-bt{
-    display: inline-block;
-    /*border: 1px red solid;*/
-    width: 40%;
-    }
-.btn {
-    width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+
+
 }
 
+.cont-in, 
+
+.cont-ex,
+
+.cont-cd,
+
+.cont-cp,
+
+.cont-est,
+
+.cont-pais,
+
+.cont-bt{
+
+    display: inline-block;
+
+    /*border: 1px red solid;*/
+
+    width: 40%;
+
+    }
+
+.btn {
+
+    width: 100%;
+
+    padding-top: 15px;
+
+    padding-bottom: 15px;
+
+}
+
+
+
+input:hover, #panel table:hover{
+
+    background-color: #dfdfdf;  
+
+    
+
+}
+
+.btn:hover{
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+ /* panel delizante para el carrito*/
+
+#deslizarBoton{
+
+    
+
+    margin: 0 auto;
+
+    width: 90%;
+
+    line-height: 40px;
+
+    /*border: 1px solid black;*/
+
+    border-radius: 5px;
+
+    border-bottom-left-radius: 0;
+
+    border-bottom-right-radius: 0;
+
+    text-align: center;
+
+    font-weight: bolder;
+
+    background: linear-gradient(263deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
+
+    color: white;
+
+}
+
+<<<<<<< HEAD
 input:hover, #panel table:hover{
     background-color: #dfdfdf;  
     
@@ -250,9 +597,51 @@ input:hover, #panel table:hover{
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     text-align: center;
-    
+=======
+#deslizarBoton:hover{
+
+    background: linear-gradient(263deg, rgba(67,70,180,.8) 31%, rgba(0,133,195,.8) 89%);
+
+    cursor: pointer;
+
 }
 
+#panel{
+
+    display: none;
+
+    margin: 0 auto;
+
+    width: 90%;
+
+    border-radius: 5px;
+
+    border-top-right-radius: 0;
+
+    border-top-left-radius: 0;
+
+    text-align: center;
+
+>>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
+    
+
+}
+
+
+
+tr,th,td {
+
+padding: 10px;
+
+    /*
+
+    border: 1px solid black;
+
+    */
+
+}
+
+<<<<<<< HEAD
 tr,th,td {
 padding: 10px;
     /*
@@ -267,110 +656,252 @@ padding: 10px;
 
 #panel table:first-child {
     border-bottom: 2px solid rgb(0,133,195);
+=======
+#panel table{
+
+    background-color: rgb(240, 240, 240);
+
+    width: 100%;
+
+    padding: 10px;
+
+}
+
+
+
+#panel table:first-child {
+
+    border-bottom: 2px solid rgb(0,133,195);
+
+>>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
 }
 
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
 footer 
+
 {
+
 	background-color: rgb(0,133,195);
+
 	color: white;
+
     padding: 1%;
+
     font-family: 'Montserrat';
+
 }
+
+
 
 #btn-menu
+
 {
+
     display: none;
+
 }
+
+
 
 #dell
+
 {
+
     display: none;
+
 }
+
+
 
 header label
+
 {
+
     display: none;
+
     width: 40px;
+
     height: 40px;
+
     padding: 10px;
+
     margin-top: 10px;
+
     margin-left: 10px;
+
     border-right: 1px solid #fff;
+
     float: left;
+
 }
+
+
 
 header label:hover 
+
 {
+
     cursor: pointer;
+
     background: rgba(0,0,0,0.3);
 
+
+
 }
+
+
+<<<<<<< HEAD
+@media (max-width: 1024px) {
+=======
+
 
 
 @media (max-width: 1024px) {
+
+>>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
     header label 
+
     {
+
         display: block;
+
     }
+
+
 
     .logo
+
     {
+
         display: none;
+
     }
+
+
 
     #dell
+
     {
+
         display: block;
+
         float: right;
+
         margin-top: 20px;
+
         margin-right: 20px;
+
     }
+
+
 
     #menu
+
     {
+
         width: 70%;
+<<<<<<< HEAD
         margin-top: 55px;
+=======
+
+        margin-top: 55px;
+
+>>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
         position: absolute;
+
     }
 
+
+
     #menu ul a
+<<<<<<< HEAD
 	{
 		display: none;
 		background: rgb(67,70,180);
     	background: linear-gradient(263deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
 	
 	}
+=======
+
+	{
+
+		display: none;
+
+		background: rgb(67,70,180);
+
+    	background: linear-gradient(263deg, rgba(67,70,180,1) 31%, rgba(0,133,195,1) 89%);
+
+	
+
+	}
+
+
+>>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
 
     #btn-menu:checked ~ #menu ul a 
+
     {
+
         display: block;
+
         margin-left: -50px;
+
         border-bottom: 9px solid #12F3F6;
+
     }
+
+
 
     main
+
     {
+
         width: 90%;
+
         margin-top: 20px;
+
     }
+
+
 
     .cont,
+
     .cont-cd,
+
     .cont-btn
+
     {
+
         width: 100%;
+
         margin: 10px;
+
     }
 
+
+
     
+
     .cont-bt
+
     {
+
         width: 95%;
+
         margin-left: 8px;
+
     }
+
     
     #deslizarBoton, #panel{
         width: 95%;
@@ -385,6 +916,35 @@ header label:hover
             border: 1px solid black;
             */
         }
+
+    #deslizarBoton, #panel{
+
+        width: 95%;
+
+        
+
+    }
+
+    #panel{
+
+        font-size: 13px;
+
+    }
+
+    tr,th,td {
+
+        padding: 2px;
+
+            /*
+
+            border: 1px solid black;
+
+            */
+
+        }
+
+
+
 
 
 }

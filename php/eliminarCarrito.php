@@ -1,4 +1,5 @@
 <?php
+
 // Funcionamiento: Se meten los los productos al arreglo guardado en la sesion, menos el producto
 // que se desea eliminar
 session_start();
@@ -23,5 +24,10 @@ if(isset($arregloNuevo)){
     
     unset($_SESSION['carrito_sess']);
 }
+<<<<<<< HEAD
 echo "Listo, se eliminó producto";
+=======
+echo "Listo, se eliminó procuto";
+
+>>>>>>> 5f1780f809b4d4c16907635b8ff5924bd268a888
 ?>

@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 $arreglo = $_SESSION['carrito_sess'];
@@ -11,4 +12,5 @@ for($i=0; $i < count($arreglo); $i++){
     }
 }
 echo "se actualiza";
+
 ?>
