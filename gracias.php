@@ -2,12 +2,8 @@
 session_start();
 include 'conexion.php';
 
-$arreglo = $_SESSION['carrito_sess'];
-if(!isset($_SESSION['carrito_sess'])){
-    header("Location: index.php");
-}else{
-
-    $total = 0;
+function insertar_fun($arreglo, $pdo){
+    $total =    0;
     
     for($i=0; $i < count($arreglo); $i++){
         $total = $total + ($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad']); 
@@ -22,8 +18,7 @@ if(!isset($_SESSION['carrito_sess'])){
         $pdo->rollback();
         throw $e;
     }
-    
-    
+
     $id_venta = $pdo->lastInsertId(); 
     $query = "INSERT into productos_venta(id_venta,id_producto,cantidad,precio,subtotal) values (?,?,?,?,?)";
     
@@ -37,6 +32,45 @@ if(!isset($_SESSION['carrito_sess'])){
             $arreglo[$i]['Cantidad'] * $arreglo[$i]['Precio']
         ]);
     }
+return $id_venta;
+}
+
+
+
+if(!isset($_SESSION['carrito_sess'])){
+    header("Location: index.php");
+}elseif (isset($_POST['rfc'])) {
+    if(!isset($_SESSION['carrito_sess'])){header("Location: index.php");}
+    //datos provenientes de facturar.php
+    $last_venta = insertar_fun($_SESSION['carrito_sess'],$pdo);
+
+    $query =  "INSERT into facturas(rfc, razon_social, pais, estado, ciudad, codigo_postal, colonia, numero_exterior, numero_interior, referencia, email, id_venta, no_sucursal) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    $gsent  =  $pdo->prepare($query);
+    try{
+        $gsent -> execute([
+            $_POST['rfc'],
+            $_POST['rs'],
+            $_POST['pais'],
+            $_POST['estado'],
+            $_POST['cd'],
+            $_POST['cp'],
+            $_POST['col'],
+            $_POST['noEx'],
+            $_POST['noIn'],
+            $_POST['ref'],
+            $_POST['email'],
+            $last_venta,
+            1
+            ]);
+    }catch (Exception $e){
+        $pdo->rollback();
+        throw $e;
+    }
+    unset($_SESSION['carrito_sess']);
+
+}else{
+    //datos provenientes de insertar_compra.php
+    insertar_fun($_SESSION['carrito_sess'],$pdo);
     unset($_SESSION['carrito_sess']);
 }
 

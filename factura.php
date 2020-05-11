@@ -40,64 +40,59 @@ include 'conexion.php';
         <form action="gracias.php" method="POST">
             <div class="cont-form">
                 <p class="inf obl"><span>*</span>Información obligatoria</p>
+                <!--
                 <div class="cont">
                     <label for="noSuc"><span>*</span>Número de sucursal: </label>
                     <input type="text" name="noSuc" id="noSuc" placeholder="XXXX-XXXX-XXXX" required>
                 </div>
+                -->
                 <div class="cont">
-                    <label for="rfc">RFC: </label>
-                    <input type="text" name="rfc" id="rfc" placeholder="AXXX9231724">
+                    <label for="rfc"><span>*</span>RFC: </label>
+                    <input type="text" name="rfc" id="rfc" placeholder="AXXX9231724" required>
                 </div>
+                <!--
                 <div class="cont">
                     <label for="ticket">Número de ticket: </label>
                     <input type="text" name="ticket" id="ticket" placeholder="XXXX-XXXX-XXXX">
                 </div>
+                -->
 
                 <div class="cont">
                     <label for="rs">Razón Social: </label>
                     <input type="text" name="rs" id="rs" placeholder="Organizacion S.A. de C.V.">
                 </div>
-                <div class="cont">
-                    <label for="dir">Dirección: </label>
-                    <input type="text" name="dir" id="dir" placeholder="Escriba dirección">
-                </div>
-                <div class="cont">
-                    <label for="col">Colonia: </label>
-                    <input type="text" name="col" id="col" placeholder="Escriba Colonia">
-                    
-                </div>
-                <div class="cont cont-ex">
-                    <label for="noEx">Número Exterio: </label>
-                    <input type="text" name="noEx" id="noEx" placeholder="Número">
-                    
-                </div>
-                <div class="cont cont-in">
-                    <label for="noIn">Número Interior: </label>
-                    <input type="text" name="noIn" id="noIn" placeholder="Número">
-                    
-                </div>
-                
-                <div class="cont cont-cd">
-                    <label for="cd">Ciudad: </label>
-                    <input type="text" name="cd" id="cd" placeholder="Escriba Ciudad">
-                    
-                </div>
-
-                
-                <div class="cont cont-cp">
-                    <label for="cp">Código Postal: </label>
-                    <input type="text" name="cp" id="cp" placeholder="Escriba C.P.">
-                    
+                <div class="cont ">
+                    <label for="pais">País: </label>
+                    <input type="text" name="pais" id="pais" placeholder="País">
                 </div>
 
                 <div class="cont cont-est">
                     <label for="estado">Estado: </label>
                     <input type="text" name="estado" id="estado" placeholder="Estado">
                 </div>
-
+                <div class="cont cont-cd">
+                    <label for="cd">Ciudad: </label>
+                    <input type="text" name="cd" id="cd" placeholder="Escriba Ciudad">
+                </div>
+                <div class="cont cont-cp">
+                    <label for="cp">Código Postal: </label>
+                    <input type="text" name="cp" id="cp" placeholder="Escriba C.P.">
+                </div>
                 <div class="cont cont-pais">
-                    <label for="pais">País: </label>
-                    <input type="text" name="pais" id="pais" placeholder="País">
+                    <label for="col">Colonia: </label>
+                    <input type="text" name="col" id="col" placeholder="Escriba Colonia">
+                </div>
+                <div class="cont cont-ex">
+                    <label for="noEx">Número Exterior: </label>
+                    <input type="text" name="noEx" id="noEx" placeholder="Número">
+                </div>
+                <div class="cont cont-in">
+                    <label for="noIn">Número Interior: </label>
+                    <input type="text" name="noIn" id="noIn" placeholder="Número">
+                </div>
+                <div class="cont">
+                    <label for="ref">Referencia: </label>
+                    <input type="text" name="ref" id="dir" placeholder="Escriba referencia">
                 </div>
 
                 <div class="cont">
