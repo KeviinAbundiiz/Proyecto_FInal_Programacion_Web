@@ -262,7 +262,9 @@
 
                     <a href="vision.html">Visión</a>
 
+                    <!--
                     <a href="factura.php">Facturación</a>
+                    -->
 
                     <a href="acercadenosotros.html">Acerca de Nosotros</a>
 

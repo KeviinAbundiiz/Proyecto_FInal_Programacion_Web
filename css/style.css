@@ -732,6 +732,13 @@ header label:hover
 
 }
 
+.thx{
+    padding-left: 0;
+}
+.img-check img{
+    width: 40%;
+    height: auto;
+}
 
 
 

@@ -26,15 +26,13 @@ include 'conexion.php';
 
 <body>
 
-
-
     <main>
 
         <div class="inf"> Confirmación de compra </div>
 
 
 
-        <form action="">
+    <form action="gracias.php">
 
          <div class="cont-form">
 
@@ -145,8 +143,15 @@ include 'conexion.php';
                 </table>
 
             </div>
-
+                
             <br><br>
+            <center>
+            <div class="cont cont-bt">
+
+                <input type="submit" value="Confirmar Compra" class="btn">
+
+            </div>
+            </center>
 
         </div>
 
@@ -157,9 +162,7 @@ include 'conexion.php';
         </div>
 
         <div class="cont cont-bt">
-
-            <input type="submit" value="Confirmar compra" class="btn">
-
+            <a href="factura.php"> <input class="btn" type="button" name="facturar" value="Facturar"></a>
         </div>
 
 
