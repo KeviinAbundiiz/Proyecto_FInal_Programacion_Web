@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 10-05-2020 a las 02:23:01
--- Versión del servidor: 10.3.16-MariaDB
--- Versión de PHP: 7.3.12
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 12-05-2020 a las 01:31:05
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `id13245444_dell`
+-- Base de datos: `dell`
 --
 
 -- --------------------------------------------------------
@@ -104,7 +103,6 @@ CREATE TABLE `facturas` (
   `referencia` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `id_venta` int(11) NOT NULL,
-  `no_ticket` int(12) NOT NULL,
   `no_sucursal` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -112,8 +110,9 @@ CREATE TABLE `facturas` (
 -- Volcado de datos para la tabla `facturas`
 --
 
-INSERT INTO `facturas` (`rfc`, `razon_social`, `pais`, `estado`, `ciudad`, `codigo_postal`, `colonia`, `numero_exterior`, `numero_interior`, `referencia`, `email`, `id_venta`, `no_ticket`, `no_sucursal`) VALUES
-('AUMK980228BU5', 'Prueba A.C de C.V', 'México', 'Guerrero', 'Acapulco', 39810, 'Unidad Habitacional El Coloso', 1, 301, 'Ubicados dentro de la gran plaza', 'kevin_abundis@outlook.com', 1, 1, 1);
+INSERT INTO `facturas` (`rfc`, `razon_social`, `pais`, `estado`, `ciudad`, `codigo_postal`, `colonia`, `numero_exterior`, `numero_interior`, `referencia`, `email`, `id_venta`, `no_sucursal`) VALUES
+('AUMK980228BU5', 'Prueba A.C de C.V', 'México', 'Guerrero', 'Acapulco', 39810, 'Unidad Habitacional El Coloso', 1, 301, 'Ubicados dentro de la gran plaza', 'kevin_abundis@outlook.com', 1, 1),
+('ZAX0007', 'Cerveza Corona ', 'Mexico', 'Guerrero', 'Nigata', 20393, 'Zapata', 2, 69, 'Frente a la tienda acm1pt', 'acm1pt@cheesepizza', 11, 1);
 
 -- --------------------------------------------------------
 
@@ -136,7 +135,21 @@ CREATE TABLE `productos_venta` (
 
 INSERT INTO `productos_venta` (`id`, `id_venta`, `id_producto`, `cantidad`, `precio`, `subtotal`) VALUES
 (2, 1, 2, 1, 6500, 6500),
-(3, 1, 6, 1, 14499, 14499);
+(3, 1, 6, 1, 14499, 14499),
+(4, 2, 1, 1, 25400.5, 25400.5),
+(5, 2, 5, 2, 21695.4, 43390.8),
+(6, 5, 5, 1, 21695.4, 21695.4),
+(7, 5, 2, 3, 6500, 19500),
+(8, 6, 6, 1, 14499, 14499),
+(9, 6, 4, 1, 12979, 12979),
+(10, 7, 3, 3, 3232.74, 9698.22),
+(11, 8, 5, 2, 21695.4, 43390.8),
+(12, 9, 6, 1, 14499, 14499),
+(13, 10, 1, 2, 25400.5, 50801),
+(14, 11, 2, 1, 6500, 6500),
+(15, 11, 5, 1, 21695.4, 21695.4),
+(16, 11, 4, 1, 12979, 12979),
+(17, 11, 6, 1, 14499, 14499);
 
 -- --------------------------------------------------------
 
@@ -148,7 +161,6 @@ CREATE TABLE `ventas` (
   `id` int(11) NOT NULL,
   `total` float NOT NULL,
   `fecha` date NOT NULL,
-  `no_ticket` int(12) NOT NULL,
   `no_sucursal` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -156,8 +168,18 @@ CREATE TABLE `ventas` (
 -- Volcado de datos para la tabla `ventas`
 --
 
-INSERT INTO `ventas` (`id`, `total`, `fecha`, `no_ticket`, `no_sucursal`) VALUES
-(1, 20999, '2020-05-06', 1, 1);
+INSERT INTO `ventas` (`id`, `total`, `fecha`, `no_sucursal`) VALUES
+(1, 20999, '2020-05-06', 1),
+(2, 68791.3, '2020-05-11', 1),
+(3, 0, '2020-05-11', 1),
+(4, 0, '2020-05-11', 1),
+(5, 41195.4, '2020-05-11', 1),
+(6, 27478, '2020-05-11', 1),
+(7, 9698.22, '2020-05-11', 1),
+(8, 43390.8, '2020-05-11', 1),
+(9, 14499, '2020-05-11', 1),
+(10, 50801, '2020-05-12', 1),
+(11, 55673.4, '2020-05-12', 1);
 
 --
 -- Índices para tablas volcadas
@@ -210,13 +232,13 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `productos_venta`
 --
 ALTER TABLE `productos_venta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
