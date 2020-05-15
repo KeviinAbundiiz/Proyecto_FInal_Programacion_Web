@@ -70,12 +70,13 @@ if(!isset($_SESSION['carrito_sess'])){
 
 }else{
     //datos provenientes de insertar_compra.php
-    insertar_fun($_SESSION['carrito_sess'],$pdo);
+    $last_venta =  insertar_fun($_SESSION['carrito_sess'],$pdo);
     unset($_SESSION['carrito_sess']);
 }
-
+$tipo_de_venta = $_GET['tipo'];
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,6 +84,7 @@ if(!isset($_SESSION['carrito_sess'])){
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/fontawesome-free-5.13.0-web/css/all.css">
+    <link rel="stylesheet" href="css/popup.css">
     <script src="js/scrollreveal.js"></script>
     <title>Gracias</title>
 </head>
@@ -97,9 +99,13 @@ if(!isset($_SESSION['carrito_sess'])){
                 <br><br>
                 La compra se ha registrado exitosamente
                 <br><br><br>
+                
+                <div class="cont cont-bt">
+                    <a href="imprimir.php?tipo=<?php echo $tipo_de_venta; ?>&num=<?php echo $last_venta;?>" target="_blank"> <input class="btn" type="button" name="regresar" value="Abrir PDF"></a>
+                </div>
                 <div class="cont cont-bt">
                     <a href="index.php"> <input class="btn" type="button" name="regresar" value="Volver a la tienda"></a>
-            </div>
+                </div>
         </div>
     </center>
         

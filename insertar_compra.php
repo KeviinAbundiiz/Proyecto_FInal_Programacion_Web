@@ -32,7 +32,7 @@ include 'conexion.php';
 
 
 
-    <form action="gracias.php">
+    <form action="gracias.php?tipo=venta" method="POST">
 
          <div class="cont-form">
 

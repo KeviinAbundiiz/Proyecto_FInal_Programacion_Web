@@ -37,7 +37,7 @@ include 'conexion.php';
         <div class="inf"> Información de Facturación</div>
         
 
-        <form action="gracias.php" method="POST">
+        <form action="gracias.php?tipo=factura" method="POST">
             <div class="cont-form">
                 <p class="inf obl"><span>*</span>Información obligatoria</p>
                 <!--
