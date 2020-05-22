@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-05-2020 a las 01:31:05
+-- Tiempo de generación: 22-05-2020 a las 21:49:43
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -111,6 +111,8 @@ CREATE TABLE `facturas` (
 --
 
 INSERT INTO `facturas` (`rfc`, `razon_social`, `pais`, `estado`, `ciudad`, `codigo_postal`, `colonia`, `numero_exterior`, `numero_interior`, `referencia`, `email`, `id_venta`, `no_sucursal`) VALUES
+('1231235', '', '', '', '', 0, '', 0, 0, '', 'yoquese@gmail', 17, 1),
+('AKSK02023', '', '', '', '', 0, '', 0, 0, '', 'nosek@gmail.com', 20, 1),
 ('AUMK980228BU5', 'Prueba A.C de C.V', 'México', 'Guerrero', 'Acapulco', 39810, 'Unidad Habitacional El Coloso', 1, 301, 'Ubicados dentro de la gran plaza', 'kevin_abundis@outlook.com', 1, 1),
 ('ZAX0007', 'Cerveza Corona ', 'Mexico', 'Guerrero', 'Nigata', 20393, 'Zapata', 2, 69, 'Frente a la tienda acm1pt', 'acm1pt@cheesepizza', 11, 1);
 
@@ -149,7 +151,17 @@ INSERT INTO `productos_venta` (`id`, `id_venta`, `id_producto`, `cantidad`, `pre
 (14, 11, 2, 1, 6500, 6500),
 (15, 11, 5, 1, 21695.4, 21695.4),
 (16, 11, 4, 1, 12979, 12979),
-(17, 11, 6, 1, 14499, 14499);
+(17, 11, 6, 1, 14499, 14499),
+(18, 12, 2, 2, 6500, 13000),
+(19, 12, 6, 1, 14499, 14499),
+(20, 13, 1, 1, 25400.5, 25400.5),
+(21, 14, 5, 1, 21695.4, 21695.4),
+(22, 15, 4, 1, 12979, 12979),
+(23, 16, 2, 1, 6500, 6500),
+(24, 17, 5, 1, 21695.4, 21695.4),
+(25, 18, 1, 1, 25400.5, 25400.5),
+(26, 19, 5, 1, 21695.4, 21695.4),
+(27, 20, 1, 1, 25400.5, 25400.5);
 
 -- --------------------------------------------------------
 
@@ -179,7 +191,16 @@ INSERT INTO `ventas` (`id`, `total`, `fecha`, `no_sucursal`) VALUES
 (8, 43390.8, '2020-05-11', 1),
 (9, 14499, '2020-05-11', 1),
 (10, 50801, '2020-05-12', 1),
-(11, 55673.4, '2020-05-12', 1);
+(11, 55673.4, '2020-05-12', 1),
+(12, 27499, '2020-05-15', 1),
+(13, 25400.5, '2020-05-15', 1),
+(14, 21695.4, '2020-05-15', 1),
+(15, 12979, '2020-05-15', 1),
+(16, 6500, '2020-05-15', 1),
+(17, 21695.4, '2020-05-15', 1),
+(18, 25400.5, '2020-05-15', 1),
+(19, 21695.4, '2020-05-15', 1),
+(20, 25400.5, '2020-05-15', 1);
 
 --
 -- Índices para tablas volcadas
@@ -232,13 +253,13 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `productos_venta`
 --
 ALTER TABLE `productos_venta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Restricciones para tablas volcadas
