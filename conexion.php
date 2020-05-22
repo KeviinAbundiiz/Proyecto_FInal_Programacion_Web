@@ -1,8 +1,4 @@
-
 <?php
-
-
-
 $link = 'mysql:host=localhost;dbname=dell';
 $usuario = 'root';
 $pass = ''; 

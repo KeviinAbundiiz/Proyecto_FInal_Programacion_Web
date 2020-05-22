@@ -10,7 +10,6 @@
 <body>
 	<center>
 		<?php
-
 		include '../conexion.php';
 
 		$email=$_POST['email'];
