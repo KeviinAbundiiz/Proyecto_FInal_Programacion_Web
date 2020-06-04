@@ -832,6 +832,13 @@ header label:hover
 
 }
 
+@media (max-width: 1360px) {
+    .popupImg{
+	width: 20%;
+	height: auto;
+    }
+    
+}
 
 
 

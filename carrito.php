@@ -416,34 +416,40 @@
 
             </table>
 
-            
-
         <div class="header">
-
-            Total: 
-
+        Subtotal:
+            $  <?php 
+                    if(isset($total)){
+                        echo number_format($total,2,'.',''); 
+                    }else{
+                        echo "No hay productos";
+                    }                                
+                ?>
         </div>
-
+    
+         <div class="header">
+        Iva:
+            $  <?php
+                    if(isset($total)){
+                        $iva = $total * 0.16;
+                        echo number_format($iva,2,'.',''); 
+                    }else{
+                        echo "No hay productos";
+                    } 
+                ?>
+        </div>
+        
         <div class="header">
-
-            $ <?php 
-
-            if(isset($total)){
-
-                echo number_format($total,2,'.',''); 
-
-            }else{
-
-                echo "No hay productos";
-
-            }
-
-            
-
+        Total:
+            $ <?php
+                if(isset($total)){
+                    $totaliva = $total + $iva;
+                    echo number_format($totaliva,2,'.',''); 
+                }else{
+                    echo "No hay productos";
+                } 
             ?>
-
         </div>
-
     </div>
 
     

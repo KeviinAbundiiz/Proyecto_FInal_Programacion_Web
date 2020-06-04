@@ -8,12 +8,15 @@ function insertar_fun($arreglo, $pdo){
     for($i=0; $i < count($arreglo); $i++){
         $total = $total + ($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad']); 
     }
+    $iva = $total * 0.16;
+    $totaliva = $total + $iva;
+
     $fecha = date('Y-m-d h:m:s'); 
     $query =  "INSERT into ventas(total, fecha, no_sucursal) values(?, ? ,?)";
     $gsent  =  $pdo->prepare($query);
     
     try{
-        $gsent -> execute([$total,$fecha,'1']);
+        $gsent -> execute([$totaliva,$fecha,'1']);
     }catch (Exception $e){
         $pdo->rollback();
         throw $e;

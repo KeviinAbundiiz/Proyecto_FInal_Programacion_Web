@@ -128,8 +128,9 @@
 
 						<br>
 
-						<b><i class="fas fa-dollar-sign"></i>  <?php echo $dato['precio']; ?> MXN</b>
-
+						<b><i class="fas fa-dollar-sign"></i>  <?php echo $dato['precio']; ?> MXN</b> 
+						<br>
+						<span>Iva: $ <?php echo $dato['precio'] * 0.16; ?></span>
 						<br>
 
 						<?php echo $dato['descripcion'];?>
@@ -205,7 +206,8 @@
 						<br>
 
 						<b> <i class="fas fa-dollar-sign"></i> <?php echo $dato['precio']; ?> MXN</b>
-
+						<br>
+						<span>Iva: $ <?php echo $dato['precio'] * 0.16; ?></span>
 						<br>
 
 						<?php echo $dato['descripcion'];?>

@@ -46,14 +46,16 @@ $pdf->Cell(47.5,10,'Precio',1,0,'L');
 $pdf->Cell(47.5,10,'Subtotal',1,1,'L');
 
 $pdf->SetFont('DejaVu','',10);
-
+$total = 0;
 foreach($resultado as $dato){
     $pdf->Cell(47.5,10,$dato['nombre'],1,0,'L');
     $pdf->Cell(47.5,10,$dato['cantidad'],1,0,'L');
     $pdf->Cell(47.5,10,'$'.$dato['precio'],1,0,'L');
     $pdf->Cell(47.5,10,'$'.$dato['subtotal'],1,1,'L');
+    $total = $total + $dato['subtotal'];
 }
-
+    $iva = $total * 0.16;
+   // $totaliva = $total + $iva;
 
 $query = "SELECT ventas.total from ventas WHERE ventas.id = $id_venta";
 $gsent  =  $pdo->prepare($query);
@@ -62,6 +64,17 @@ $resultado = $gsent->fetchAll();
 
 
 $pdf->SetFont('DejaVu','B',10);
+
+$pdf->Cell(47.5,10,'',1,0,'L');
+$pdf->Cell(47.5,10,'',1,0,'L');
+$pdf->Cell(47.5,10,'',1,0,'L');
+$pdf->Cell(47.5,10,'Subtotal Equipos: $'.$total,1,1,'L');
+
+$pdf->Cell(47.5,10,'',1,0,'L');
+$pdf->Cell(47.5,10,'',1,0,'L');
+$pdf->Cell(47.5,10,'',1,0,'L');
+$pdf->Cell(47.5,10,'Iva: $'.$iva,1,1,'L');
+
 
 $pdf->Cell(47.5,10,'',1,0,'L');
 $pdf->Cell(47.5,10,'',1,0,'L');

@@ -109,35 +109,51 @@ include 'conexion.php';
                     }
 
                     ?>
-
                     <tr>
-
                         <th></th>
-
                         <th></th>
-
-                        <th>Total: </th>
-
+                        <th>SubTotal: </th>
                         <th style="border-bottom: 2px solid rgb(0,133,195);">
 
                             $ <?php 
-
                             if(isset($total)){
-
                                 echo number_format($total,2,'.',''); 
-
                             }else{
-
                                 echo "No hay productos";
-
                             }                                
-
                             ?>
-
                         </th>
-
-
-
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>IVA: </th>
+                        <th style="border-bottom: 2px solid rgb(0,133,195);">
+                            $ <?php
+                                if(isset($total)){
+                                    $iva = $total * 0.16;
+                                    echo number_format($iva,2,'.',''); 
+                                }else{
+                                    echo "No hay productos";
+                                } 
+                            ?>
+                        </th>
+                    </tr>
+                    
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Total: </th>
+                        <th style="border-bottom: 2px solid rgb(0,133,195);">
+                            $ <?php
+                                if(isset($total)){
+                                    $totaliva = $total + $iva;
+                                    echo number_format($totaliva,2,'.',''); 
+                                }else{
+                                    echo "No hay productos";
+                                } 
+                            ?>
+                        </th>
                     </tr>
 
                 </table>
