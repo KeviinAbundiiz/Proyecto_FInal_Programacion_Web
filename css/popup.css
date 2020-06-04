@@ -172,7 +172,7 @@
 
 	font-family: 'Montserrat', sans-serif;
 
-	padding: 20px;
+	padding: 10px;
 
 	text-align: center;
 
@@ -218,15 +218,14 @@
 
 .popup h3 {
 
-	font-size: 36px;
+	font-size: 26px;
 
 	font-weight: 600;
 
 	margin-bottom: 10px;
 
 	opacity: 0;
-	
-	margin-top: 0;
+	margin:0;
 
 }
 
@@ -234,13 +233,14 @@
 
 .popup h4 {
 
-	font-size: 26px;
+	font-size: 20px;
 
 	font-weight: 300;
 
 	margin-bottom: 40px;
 
 	opacity: 0;
+	margin:0;
 
 }
 
@@ -320,3 +320,21 @@
 
 }
 
+@media (max-width: 1360px) {
+    .popup{
+        padding: 5px;
+    }
+    .popup h4 {
+	font-size: 16px;
+	margin:0;
+    }
+    .popup h3 {
+	    font-size: 20px;
+	    margin:0;
+    }
+    .popup ul{
+        margin: 0;
+        font-size: 12px;
+        padding: 0;
+    }
+}
